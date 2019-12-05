@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scary Halloween Party</title>
+    <link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+    <!--este diseño no es responsive solo para pc-->
+    <style>
+        body {background-color:black}
+        #wrapper {position:relative/*eñ wrapper se mueve para centrarse*/;
+                 background-image:url("imagenes/fondo.jpg");
+                 width:1268px;
+                 height:665px;
+                 margin:auto;
+                 border-radius:70px;
+                 box-shadow:rgb(255, 174, 0) 20px 20px 20px;}
+        h1 {position:absolute/*lo que va dentro se mueve con el*/;
+            font-family: 'Nosifer', cursive;
+            left:350px;
+            top:20px;
+            font-size:220%; 
+            color:orangered;}
+        #p1 {position:absolute;
+            top:300px;
+            left:800px;
+            font-size:200%;}
+        #tomb {position:absolute;
+           height:180px;
+           width:140px;
+           border:1px solid transparent; 
+           left:870px;
+           top:390px;
+           }   
+        #hand {position:absolute;
+           height:250px;
+           width:90px;
+           border:1px solid transparent; 
+           left:700px;
+           top:340px;}
+        #zombi {position:absolute;
+         top:300px;
+         left:850px;
+         visibility:hidden;}
+        #zombi1 {position:absolute;
+         top:330px;
+         left:650px;
+         visibility:hidden;
+         }
+    </style>
+
+    <script>
+         function mostrar(id){
+             document.getElementById(id).style.visibility="visible";
+         }
+        function ocultar(id){
+             document.getElementById(id).style.visibility="hidden";
+         }
+        function sonar(id){
+             document.getElementById(id).play();
+         }
+         function parar(id){
+             document.getElementById(id).pause();
+         }
+    </script>
+</head>
+
+<body>
+    <audio id="demon">
+        <source src="sonidos/sonido1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="demon1">
+        <source src="sonidos/sonido2.mp3" type="audio/mpeg">
+    </audio>   
+    <div id="wrapper">
+        <h1>
+            Scary Halloween Party
+        </h1>
+        <div id="hand" onclick="mostrar('zombi1');sonar('demon1')"
+            ></div>
+        <p id="p1">Don´t catch the tomb</p>
+        <div id="tomb" onclick="mostrar('zombi');sonar('demon')"></div>
+        <img id="zombi" onclick="ocultar('zombi');parar('demon')" src="imagenes/zombi.gif" height="275">
+        <img id="zombi1" onclick="ocultar('zombi1');parar('demno1')" src="imagenes/zombi1.gif" height="230">
+    </div>
+    
+</body>
+</html>

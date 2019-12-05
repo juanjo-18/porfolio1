@@ -1,0 +1,36 @@
+/* este es el estilo de mi pagina de recetas */
+body {background-image:url("imagenes/fondo.jpg");
+    background-size:300px 300px;
+    padding:0%;}
+#wrapper {width:80%;
+    height:600px; /* lo quito si quiero qe el recuadro se valla alargando con el texto*/
+    overflow:auto; /* por si no cabe el contenido en el recuadro*/
+    background-color:white;
+    margin:auto;
+    padding:0.5vw;
+    border:1px solid black;}
+ul {list-style-image:url(imagenes/icono.png)}
+h1 {text-align:center;
+    color:rgb(204, 179, 77);}
+h2 {color:rgb(201, 133, 78);
+border-left:3px solid brown;
+border-bottom:1px solid brown;
+padding:5px;
+display:inline-block;}
+dt {font-weight:bold;
+color:rgb(71, 93, 133);}
+table {border:2px solid rgb(235, 84, 30);
+        border-collapse:collapse;}
+td, th {border:1px solid black;
+        padding:5px;}
+td {text-align:center;}
+tr:hover {background-color: rgb(156, 100, 15);}
+iframe {display:block;
+float:right; /* para poner el video en la izquierda o derecha*/
+/*margin:auto por si lo quiero en el centro el video*/
+margin-right:5vw;
+margin-top:50px;}
+/* vamos a utilizar un recurso llamado media query se trata de incluir una especie de "if" y una condicion para que cambie algo en el estilo cuando tengo una pantalla pequeña*/
+@media only screen and (max-width:500px){
+    #wrapper {width:95%;}
+}

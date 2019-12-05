@@ -1,0 +1,43 @@
+/*este es el estilo de porfolio de juanjo*/
+body {}
+#wrapper {width:85%;
+        /*height:600px;/*luego lo borro*/
+        background-color:white;
+        margin:auto;}
+header {position:relative
+    ;background-image:url("imagenes-porfolio/header.jpg");
+    height:200px;
+    background-size:cover;
+    /* cover adapta bien la imagen responsive pero la corta */
+    background-position:center;
+    /*como mi imagen tiene lo importante en el centro debo poner background-position:center paraque corte de los lados*/
+}
+#titulo {position:absolute; 
+    width:40%;
+    top:50px;
+    /*ojo,m raro para que el navegador calcule bien el centro hay que ponerle estas 4 cosas */
+    left:0;
+    right:0px;
+    margin-left:auto;
+    margin-right:auto;
+     font-family: 'Raleway', sans-serif; font-size:2.2em; background-color:rgba(10, 75, 252, 0.5);
+; text-align:center;}
+/* aqui empieza el estilo de main*/
+h1 {text-align:center;}
+div.polaroid{
+    width: 40%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    float:left;
+    margin:4%;
+  }
+div.polaroid:hover{
+      opacity:0.5;}
+div.container{
+    text-align: center;
+    padding:10px 20px;
+  }
+  @media only screen and (max-width:500px){
+    div.polaroid {width:90%;}
+}
